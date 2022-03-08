@@ -24,7 +24,6 @@ public:
     void clear(int k);
     bool test(int k);
     void reset(); //重复利用
-    void show(); //演示使用，打印出T内储存的数据
 };
 
 void Bitmap_J::set(int k){
