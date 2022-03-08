@@ -3,12 +3,12 @@
 ### 1. Vector Template
 >ADT  
 
-![](\1-Vector_Template\Vector-ADT.png)
+![](https://github.com/RichardS0268/DSA-Implemented/blob/master/02_vector/1-Vector_Template/Vector-ADT.png)
 
 >Characters
 + Vector是一种典型的线性数据结构，可以将它看做是经过包装的数组。
 + Vector遵循寻秩访问（call by rank）,它在逻辑上和物理上（地址）都是连续的
-+ 这一特性使得Vector的静态操作 -- 访问（*visit*），比较（*compare*），而动态操作如插入（insert）删除（*erase*）则比较耗时，worst case均会达到$O(n)$
++ 这一特性使得Vector的静态操作 -- 访问（*visit*），比较（*compare*）优，而动态操作如插入（insert）删除（*erase*）则比较耗时，worst case均会达到$O(n)$
 + 有序向量能更好地实现查找（$\color{blue}{Search}$），去重等操作。
 + 为了得到有序向量，有各种排序算法（$\color{blue}{Sort}$），同时在插入（*insert*）和删除（*erase*）的时候也都需维护有序性。
 
