@@ -2,7 +2,7 @@
 
 ### 1. Vector-ADT
 
-![](C:\Users\Richard.S\Desktop\DSA-implemented\02_vector\Vector-ADT.png)
+![](Vector-ADT.png)
 
 
 ### 2. Vector-特点
