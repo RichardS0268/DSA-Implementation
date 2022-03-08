@@ -3,7 +3,7 @@
 ### 1. Vector Template
 >ADT  
 
-![](/1-Vector_Template/Vector-ADT.png)
+![](https://github.com/RichardS0268/DSA-Implemented/blob/master/02_vector/1-Vector_Template/Vector-ADT.png)
 
 >Characters
 + Vector是一种典型的线性数据结构，可以将它看做是经过包装的数组。
