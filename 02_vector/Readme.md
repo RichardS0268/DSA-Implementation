@@ -1,10 +1,7 @@
 # 01 Vector
 
-### 1. Vector Template
->ADT  
-![](./1-Vector_Template/ADT.png)
+### 1. Characters
 
->Characters
 + Vector是一种典型的线性数据结构，可以将它看做是经过包装的数组。
 + Vector遵循寻秩访问（call by rank）,它在逻辑上和物理上（地址）都是连续的
 + 这一特性使得Vector的静态操作 -- 访问（*visit*），比较（*compare*），而动态操作如插入（insert）删除（*erase*）则比较耗时，worst case均会达到$O(n)$
@@ -40,3 +37,7 @@
 ### 4. Bitmap
 + Bitmap是照应Vector**物理空间连续**特点的一种数据结构，它可以用相对较小的空间存储较大的数据并进行去重，排序等操作。
 + Bitmap的一个缺点在于初始化时Memset(M, 0, N)操作费时，校验环是用空间换取时间的一种方式。
+
+### 5. Test
+`g++ test.cpp -o test`
+`./test n` (n为随机初始化向量中元素的个数)
