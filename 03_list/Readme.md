@@ -23,5 +23,5 @@
 + 测试List功能:
    `cd .../03_list` `g++ test.cpp -o test` `./test`
 + 测试Cursor List功能:
-   `cd .../03_list/CursorList` `g++ test.cpp -o test` `./test`
+   `cd .../03_list/CursorList` `g++ test.cpp -o test` `./test n`(n为随机初始化List中元素的个数)
    
