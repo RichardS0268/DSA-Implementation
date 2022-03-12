@@ -1,6 +1,10 @@
 #ifndef __LIST__
 #define __LIST__
+#include <iostream>
 #include "ListNode.h"
+#include "../00_util/utils.h"
+using namespace std;
+
 
 template<typename T>
 class List{ //列表模板类
@@ -16,7 +20,7 @@ protected:
     void merge(ListNodePosi<T>&, int, List<T>&, ListNodePosi<T>, int); //归并
     void mergeSort(ListNodePosi<T>&, int); //对从p开始连续的n个节点归并排序
     void selectionSort(ListNodePosi<T>, int); //从对p开始连续的n个节点选择排序
-    void insertionSort(ListNodePosi<T>, int); //从对p开始连续的n个节点插入排序
+    void insertSort(ListNodePosi<T>, int); //从对p开始连续的n个节点插入排序
 
 public:
 // 构造函数
@@ -55,17 +59,18 @@ public:
         _size++;
         return trailer->insertAsPred(e);
     }
-    ListNodePosi<T> insertA (ListNodePosi<T> p, T const& e){ //将e当做p的后继插入
+    ListNodePosi<T> insert (ListNodePosi<T> p, T const& e){ //将e当做p的后继插入
         _size++;
         return p->insertAsSucc(e);
     }
-    ListNodePosi<T> insertB (ListNodePosi<T> p, T const& e){ //将e当做p的前驱插入
+    ListNodePosi<T> insert (T const& e, ListNodePosi<T> p){ //将e当做p的前驱插入
         _size++;
         return p->insertAsPred(e);
     }
     T remove (ListNodePosi<T> p); //删除合法位置p处的节点，返回被删除节点
     void merge(List<T>& L) {
-        merge(first(), size(), L, L.first(), L.size());
+        ListNodePosi<T> A = first();
+        merge(A, size(), L, L.first(), L.size());
     }
     void sort (ListNodePosi<T> p, int n, int type = 1); //列表区间排序
     void sort() {sort(first(), _size, 1);} //列表整体排序
@@ -106,7 +111,9 @@ List<T>::List (List<T> const& L){
 
 template<typename T> //r+n<=L.size()
 List<T>::List (List<T> const& L, int r, int n){
-    copyNodes(L[r], n);
+    ListNodePosi<T> p = L.first();
+    while (0 < r--) p = p->succ;
+    copyNodes(p, n);
 }
 
 template<typename T>
@@ -143,7 +150,7 @@ T& List<T>::operator[](int r) const{ //O(r)，不宜常用
 template<typename T> //在无序列表内节点p的n个前驱中(查找对象不包括p本身)，找到等于e的最后者
 ListNodePosi<T> List<T>::find(T const& e, int n, ListNodePosi<T> p) const{ //O(n)
     while (0 < n--){
-        if (e == (p = p->pred)->data) return p;
+        if ((e == (p = p->pred)->data) && p!=header) return p;
     }
     return NULL; //p越出左边界意味着区间内不含e，查找失败，则返回NULL
 }
@@ -180,7 +187,7 @@ void List<T>::selectionSort(ListNodePosi<T> p, int n){ //选择排序，O(n^2)
     for (int i = 0; i < n; i++) tail = tail->succ; //头尾插桩
     while (1 < n){
         ListNodePosi<T> max = selectMax(head->succ, n);
-        insertB(tail, remove(max)); //insert(ListNodePosi, ListNode) -> 作为前驱插入
+        insert(remove(max), tail); //insert(ListNodePosi, ListNode) -> 
         tail = tail->pred;
         n--;
     }
@@ -188,9 +195,9 @@ void List<T>::selectionSort(ListNodePosi<T> p, int n){ //选择排序，O(n^2)
 
 template <typename T> 
 //input sensitive: Best case O(n), worst case O(n^2)
-void List<T>::insertionSort(ListNodePosi<T> p, int n){ //插入排序
+void List<T>::insertSort(ListNodePosi<T> p, int n){ //插入排序
     for (int r = 0; r < n; r++){
-        insertA(search(p->data, r, p), p->data);//查找（p之前的r个元素中不大于p的最后一个节点）+（将p的值作为后继）插入到该节点之后
+        insert(search(p->data, r, p), p->data);//查找（p之前的r个元素中不大于p的最后一个节点）+（将p的值作为后继）插入到该节点之后
         p = p->succ;
         remove(p->pred); //转向下一节点
     }
@@ -205,7 +212,7 @@ void List<T>::merge(ListNodePosi<T>& p, int n, List<T>& L, ListNodePosi<T> q, in
             n--;
         }
         else{ //倘若p已全部归并完，或者q的值更小，就把q的值插到p之前
-            insertB(p, L.remove((q = q->succ)->pred));
+            insert(L.remove((q = q->succ)->pred), p);
             m--;
         }
     }
@@ -256,6 +263,19 @@ int List<T>::uniquify(){//成批剔除元素，效率更高，O(n)
         else remove(q); //delete操作把q的空间释放掉，但q已经声明，且由于while循环，q也不会称为野指针
     }
     return oldSize - _size; //返回删除元素总数
+}
+
+template <typename T> 
+void List<T>::reverse() { //前后倒置
+   if ( _size < 2 ) return; //平凡情况
+   ListNodePosi<T> p; ListNodePosi<T> q;
+   for ( p = header, q = p->succ; p != trailer; p = q, q = p->succ )
+      p->pred = q; //自前向后，依次颠倒各节点的前驱指针
+   trailer->pred = NULL; //单独设置尾节点的前驱指针
+   for ( p = header, q = p->pred; p != trailer; p = q, q = p->pred )
+      q->succ = p; //自前向后，依次颠倒各节点的后继指针
+   header->succ = NULL; //单独设置头节点的后继指针
+   swap ( header, trailer ); //头、尾节点互换
 }
 
 //---- 遍历 ----
