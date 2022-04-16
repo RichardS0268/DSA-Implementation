@@ -16,7 +16,7 @@
 + 一些语言没有指针的数据类型，可通过Cursor List实现
 + 创建CurNode，CurNode数组即可作为List使用
 + CurNode包括elem和link
-+ 在new时实际为开辟新空间，在delete时实际也未清除空间
++ 在new时实际未开辟新空间，在delete时实际也未清除空间
 + 即使对于有指针类型的语言，由于new和delete很耗时，但对于数据大小不敏感，因此可通过Cursor List，在开始时开辟一大块空间，供List使用，以避免频繁new和delete的开销
 
 ### 4. Test
