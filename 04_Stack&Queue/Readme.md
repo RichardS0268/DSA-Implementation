@@ -159,7 +159,7 @@ g++ -o laby laby.cpp
 Route found
 ```
 
-> ■为障碍，$为终点，Ⓢ为起点，○为BFS途径过的点，—为通路路径
+> ■为障碍，$为终点，Ⓢ为起点，○为BFS过程中搜索过的点，—为通路路径
 
 有障碍时，BFS解出的路径**往往不是**最短路径，更多有关路径搜索的讨论见  [Introduction-to-AI/Search/A-star](https://github.com/RichardS0268/Introduction-to-AI/tree/main/Search/A-star) 
 
