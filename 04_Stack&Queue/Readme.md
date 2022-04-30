@@ -43,7 +43,7 @@ g++ -o convert convert.cpp
 ```sh
 # ./Vector_Application/paren.cpp
 g++ -o paren paren.cpp
-./paren`
+./paren
 ```
 
 #### 2.4 延迟缓冲
