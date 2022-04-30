@@ -172,7 +172,7 @@ Route found
 | `size()`     | 报告队列的规模（元素总数） |
 | `empty()`    | 判断队列是否为空           |
 | `enqueue(e)` | 将e插入队尾                |
-| `dequeue()`  | 删除队首队首对象           |
+| `dequeue()`  | 删除队首对象           |
 | `front()`    | 引用队首对象               |
 
 Queue是一种简单的线性结构，最大的特点是先进先出。`Queue`可以基于`List`实现，也可以通过两个`Stack`实现。通过两个Stack实现时，通过三种不同的分析方法——Accounting, Aggregate, Potential进行均摊分析，可得这种实现方式仍满足单次操作$O(1)$的复杂度
