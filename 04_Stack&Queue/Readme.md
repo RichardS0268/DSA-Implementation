@@ -175,7 +175,7 @@ Route found
 | `dequeue()`  | 删除队首对象           |
 | `front()`    | 引用队首对象               |
 
-Queue是一种简单的线性结构，最大的特点是先进先出。`Queue`可以基于`List`实现，也可以通过两个`Stack`实现。通过两个Stack实现时，通过三种不同的分析方法——Accounting, Aggregate, Potential进行均摊分析，可得这种实现方式仍满足单次操作$O(1)$的复杂度
+Queue是一种简单的线性结构，最大的特点是先进先出。`Queue`可以基于`List`实现，也可以通过两个`Stack`实现。通过两个Stack实现时，通过三种不同的分析方法——Accounting, Aggregate, Potential进行均摊分析，可得这种实现方式仍满足单次操作复杂度均为$O(1)$.
 
 ### 2. Application
 
