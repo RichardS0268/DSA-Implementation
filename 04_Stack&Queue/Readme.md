@@ -62,18 +62,18 @@ Out: 运算结果，原表达式的逆波兰表达式(rpn)
 while (expr尚未扫描完毕)
 	读取下一元素x
 	if x is opnd
-		opnd.push(x)
-		append (RPN, opnd.top())
+	    opnd.push(x)
+	    append (RPN, opnd.top())
 	else
-		判断optr.top()与x的优先级
-		if x 优先级更高
-        	optr.push(x)	
+	    判断optr.top()与x的优先级
+	    if x 优先级更高
+                optr.push(x)	
         else 
-        	op = optr.pop()
+            op = optr.pop()
             从opnd中弹出需要的操作数
             cal(op, opnds)
             append (RPN, opnd.top())
-    继续读取
+        继续读取
 返回栈顶(output), 返回RPN   	
 ```
 
