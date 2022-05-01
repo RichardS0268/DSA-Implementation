@@ -68,8 +68,11 @@
 
   ```
   # .../03_list/CursorList 
-  g++ test.cpp -o test 
-  ./test n(n为随机初始化List中元素的个数)
+  g++ CurList_test.cpp -o CurList_test 
+  ./CurList_test n(n为随机初始化List中元素的个数)
+  
+  g++ CurList_p_test.cpp -o CurList_p_test
+  ./CurList_p_test n(n为随机初始化List中元素的个数)
   ```
 
   
