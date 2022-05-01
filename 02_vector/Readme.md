@@ -1,4 +1,4 @@
-# 01 Vector
+# Vector
 
 ### 1. Characters
 
