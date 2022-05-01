@@ -39,7 +39,6 @@ public:
     bool valid (ListNodePosi<T> p){ //判断位置p对外是否合法
         return p && (trailer != p) && (header != p); //头尾哨兵不对外开放 
     }
-    int disordered() const; // 判断列表是否已经排序
     ListNodePosi<T> find(T const& e) const{ //无序列表查找
         return find(e, _size, trailer);
     }
