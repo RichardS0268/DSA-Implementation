@@ -25,7 +25,7 @@
 示例 *进制转换*  
 
 ```sh
-# ./Vector_Application/covert.cpp`
+# ./Stack_Application/covert.cpp`
 g++ -o convert convert.cpp
 ./convert
 ```
@@ -41,7 +41,7 @@ g++ -o convert convert.cpp
 示例 2: *括号匹配*
 
 ```sh
-# ./Vector_Application/paren.cpp
+# ./Stack_Application/paren.cpp
 g++ -o paren paren.cpp
 ./paren
 ```
@@ -78,7 +78,7 @@ while (expr尚未扫描完毕)
 ```
 
 ```sh
-# ./Vector_Application/computation.cpp
+# ./Stack_Application/computation.cpp
 g++ -o computation computation.cpp
 ./computation
 ```
@@ -90,7 +90,7 @@ g++ -o computation computation.cpp
 示例1：*八皇后问题*
 
 ```sh
-# ./Vector_Application/queue.cpp
+# ./Stack_Application/queue.cpp
 g++ -o queue queue.cpp
 ./queue N # N为皇后数量
 ```
@@ -124,7 +124,7 @@ g++ -o queue queue.cpp
 示例2: *迷宫问题*
 
 ```sh
-# ./Vector_Application/laby.cpp
+# ./Stack_Application/laby.cpp
 g++ -o laby laby.cpp
 ./laby 
 ```
