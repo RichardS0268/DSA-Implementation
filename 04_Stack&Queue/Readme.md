@@ -165,7 +165,7 @@ Route found
 
 #### 2.6 直方图内最大矩形
 
-<img src="https://github.com/RichardS0268/DSA-Implemented/blob/master/04_Stack%26Queue/docs/max_rect1.png" alt="image-20220502114754257" style="zoom:67%;" />
+<img src="https://github.com/RichardS0268/DSA-Implemented/blob/master/04_Stack%26Queue/docs/max_rect1.png" alt="image-20220502114754257" style="zoom:30%;" />
 
 > 详见
 
