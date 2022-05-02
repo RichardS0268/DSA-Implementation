@@ -3,7 +3,7 @@
 ### 1. Characters
 
 + List是一种典型的线性数据结构，其在逻辑上连续，而物理上不连续
-+ 相较于vector而言，List的静态操作费时，如有序向量的查找Search，本质上只能通过sequential search的方式来查找（$O(n)$）
++ 相较于Vector而言，List的静态操作费时，如有序向量的查找Search，本质上只能通过sequential search的方式来查找（$O(n)$）
 + 但List的动态操作优，如插入删除，仅需$O(1)$
 
 ### 2. Interface
