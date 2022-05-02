@@ -165,6 +165,10 @@ Route found
 
 #### 2.6 直方图内最大矩形
 
+<img src="https://github.com/RichardS0268/DSA-Implemented/blob/master/04_Stack%26Queue/docs/max_rect1.png" alt="image-20220502114754257" style="zoom:67%;" />
+
+> 详见
+
 
 ## Queue
 
@@ -175,7 +179,7 @@ Route found
 | `size()`     | 报告队列的规模（元素总数） |
 | `empty()`    | 判断队列是否为空           |
 | `enqueue(e)` | 将e插入队尾                |
-| `dequeue()`  | 删除队首对象           |
+| `dequeue()`  | 删除队首对象               |
 | `front()`    | 引用队首对象               |
 
 Queue是一种简单的线性结构，最大的特点是先进先出。`Queue`可以基于`List`实现，也可以通过两个`Stack`实现。通过两个Stack实现时，通过三种不同的分析方法——Accounting, Aggregate, Potential进行均摊分析，可得这种实现方式仍满足单次操作复杂度均为$O(1)$.
@@ -201,10 +205,3 @@ g++ -o ban_sim bank_sim.cpp
 `Queap` 是`Queue`和`Heap`的结合，在原有接口上增加`getMax`或`getMin` 接口，可以在$O(1)$时间内得到最大/最小元素。Queap可以通过`Queue（List）`+`Heap`的方式实现，也可以通过两个`Steap`来实现
 
 > 见 ./Queue_Application/Queap
-
-
-
-
-
-
-
