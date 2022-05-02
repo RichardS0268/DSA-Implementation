@@ -163,6 +163,9 @@ Route found
 
 有障碍时，BFS解出的路径**往往不是**最短路径，更多有关路径搜索的讨论见  [Introduction-to-AI/Search/A-star](https://github.com/RichardS0268/Introduction-to-AI/tree/main/Search/A-star) 
 
+#### 2.6 直方图内最大矩形
+
+
 ## Queue
 
 ### 1. Interface
