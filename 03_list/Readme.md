@@ -71,6 +71,7 @@
   g++ CurList_test.cpp -o CurList_test 
   ./CurList_test
   
+  # .../03_list/CursorList
   g++ CurList_p_test.cpp -o CurList_p_test
   ./CurList_p_test n(n为随机初始化List中元素的个数)
   ```
