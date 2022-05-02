@@ -167,7 +167,7 @@ Route found
 
 <img src="https://github.com/RichardS0268/DSA-Implemented/blob/master/04_Stack%26Queue/docs/max_rect1.png" alt="image-20220502114754257" style="zoom:30%;" />
 
-> 详见
+> 详见 [max_rect](https://github.com/RichardS0268/DSA-Implemented/blob/master/04_Stack%26Queue/Stack_Application/%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%86%85%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2.md)
 
 
 ## Queue
