@@ -204,4 +204,4 @@ g++ -o ban_sim bank_sim.cpp
 
 `Queap` 是`Queue`和`Heap`的结合，在原有接口上增加`getMax`或`getMin` 接口，可以在$O(1)$时间内得到最大/最小元素。Queap可以通过`Queue（List）`+`Heap`的方式实现，也可以通过两个`Steap`来实现
 
-> 见 ./Queue_Application/Queap
+> 见 ./Queue_Application/Queap.h
