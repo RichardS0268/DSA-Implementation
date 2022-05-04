@@ -44,6 +44,7 @@
   + 外循环需要$O(n)$，若采取遍历方式selectMax需$O(n)$，则总体复杂度为$O(n^2)$，在之后的数据结构中，可将selectMax的复杂度降为$O(logn)$，则selectionSort的复杂度随之降为$O(nlogn)$
 
 <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center"/>
+<img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width = "100" height = "100" div align=right />
 
 + InsertSort：
 
