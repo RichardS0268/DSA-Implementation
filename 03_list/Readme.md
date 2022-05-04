@@ -51,7 +51,7 @@
   + Best Case -- $O(n)$，全部有序；Worst Case -- $O(n^2)$，全部逆序
   + InsertSort属于输入敏感性(input sensitive)，其总体复杂度取决于数据中逆序对的个数，事实上，每次交换只能减少一个逆序对，程序运行时间为$O(n+I)$，其中I为逆序对个数
   
-    <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
+      <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
 
 ### 4. Cursor List
 
