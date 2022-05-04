@@ -64,7 +64,7 @@
   + 采用分治策略，类似于向量的MergeSort。
   + 排序时，首先需要花费线性的时间确定居中的切分点，然后递归地对长度为$\frac{n}{2}$的两个子列表做归并排序，最后还需要花费线性的时间做二路归并。
   + 虽然在划分切分点时，Vector寻秩访问，仅需$O(1)$时间，而List需要线性$O(n)$的时间，但由于在合并阶段两者都需要$O(n)$的时间，因此`Vector.mergesort()`和`List.mergesort()`的渐进复杂度相同，皆为$O(n·logn)$。
-  + 事实上，$O(n·logn)$ 便是*CBA (comparation based algorithms)* 中排序算法的复杂度下界。
+  + 事实上，$O(n·logn)$ 便是*comparison sorting* 类排序算法的复杂度下界。
 
 ### 4. Cursor List
 
