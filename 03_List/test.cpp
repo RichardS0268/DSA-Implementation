@@ -2,8 +2,9 @@
 /******************************************************************************************
  * Test of list
  ******************************************************************************************/
-#include "List.h"
-#include "util.h"
+#include "./List.h"
+#include "./util.h"
+#include "../00_util/utils.h"
 #include <iostream>
 using namespace std;
 
