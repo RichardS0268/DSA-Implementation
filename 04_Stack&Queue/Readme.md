@@ -26,7 +26,7 @@
 
 ```sh
 # ./Stack_Application/covert.cpp`
-g++ -o convert convert.cpp
+g++ convert.cpp -o convert 
 ./convert
 ```
 
@@ -42,7 +42,7 @@ g++ -o convert convert.cpp
 
 ```sh
 # ./Stack_Application/paren.cpp
-g++ -o paren paren.cpp
+g++ paren.cpp -o paren 
 ./paren
 ```
 
@@ -79,7 +79,7 @@ while (expr尚未扫描完毕)
 
 ```sh
 # ./Stack_Application/computation.cpp
-g++ -o computation computation.cpp
+g++ computation.cpp -o computation 
 ./computation
 ```
 
@@ -91,7 +91,7 @@ g++ -o computation computation.cpp
 
 ```sh
 # ./Stack_Application/queue.cpp
-g++ -o queue queue.cpp
+g++ queue.cpp -o queue 
 ./queue N # N为皇后数量
 ```
 
@@ -125,7 +125,7 @@ g++ -o queue queue.cpp
 
 ```sh
 # ./Stack_Application/laby.cpp
-g++ -o laby laby.cpp
+g++ laby.cpp -o laby 
 ./laby 
 ```
 
@@ -196,7 +196,7 @@ Queue是一种简单的线性结构，最大的特点是先进先出。`Queue`�
 
 ```
 # ./Queue_Application/bank_sim.cpp
-g++ -o ban_sim bank_sim.cpp
+g++ bank_sim.cpp -o ban_sim 
 ./ban_sim 
 ```
 
