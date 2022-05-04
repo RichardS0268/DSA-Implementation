@@ -3,4 +3,8 @@ I'm taking *Data Structure and Algorithm* course this semester. I'd like to reim
 
 ![](https://media.giphy.com/media/1qkglWyONByHhVPLHi/giphy.gif)
 
-##### Reference: https://dsa.cs.tsinghua.edu.cn/~deng/ds/src_link/
+##### Reference: 
+##### https://dsa.cs.tsinghua.edu.cn/~deng/ds/src_link/
+##### https://visualgo.net/en
+##### https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
