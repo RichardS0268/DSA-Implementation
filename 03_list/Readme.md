@@ -41,23 +41,30 @@
 + SelectionSort:
 
   + 从后往前，依次有序，每次选出unsorted部分中最大的元素插入sorted部分
+
   + 外循环需要$O(n)$，若采取遍历方式selectMax需$O(n)$，则总体复杂度为$O(n^2)$，在之后的数据结构中，可将selectMax的复杂度降为$O(logn)$，则selectionSort的复杂度随之降为$O(nlogn)$
-   
-      > [算法演示](https://cloud.tsinghua.edu.cn/f/89960101c61d4b4eb3b6/?dl=1)
-      > 
-      > <img src="https://media.giphy.com/media/BtxseLgSuESZoZhPdT/giphy.gif" width="700px" div align="center" />
-      
+
+    > [算法演示](https://cloud.tsinghua.edu.cn/f/89960101c61d4b4eb3b6/?dl=1)
+    >
+    > <img src="https://media.giphy.com/media/BtxseLgSuESZoZhPdT/giphy.gif" width="700px" div align="center" />
 
 + InsertSort：
 
   + 从前往后，依次有序，对每“新增”的一个元素，在sorted部分中寻找插入位置并插入
+
   + Best Case -- $O(n)$，全部有序；Worst Case -- $O(n^2)$，全部逆序
+
   + InsertSort属于输入敏感性(input sensitive)，其总体复杂度取决于数据中逆序对（inversion）的个数，事实上，每次交换只能减少一个逆序对，程序运行时间为$O(n+I)$，其中I为逆序对个数
-      
-      > [算法演示](https://cloud.tsinghua.edu.cn/f/aad19e358da24ae68fd2/?dl=1) 
-      > 
-      > <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
-      
+
+    > [算法演示](https://cloud.tsinghua.edu.cn/f/aad19e358da24ae68fd2/?dl=1) 
+    >
+    > <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
+
++ MergeSort
+  + 采用分治策略，类似于向量的MergeSort。
+  + 排序时，首先需要花费线性的时间确定居中的切分点，然后递归地对长度为$\frac{n}{2}$的两个子列表做归并排序，最后还需要花费线性的时间做二路归并。
+  + 虽然在划分切分点时，Vector寻秩访问，仅需$O(1)$时间，而List需要线性$O(n)$的时间，但由于在合并阶段两者都需要$O(n)$的时间，因此`Vector.mergesort()`和`List.mergesort()`的渐进复杂度相同皆为$O(n·logn)$。
+  + 事实上，$O(n·logn)$ 便是*CBA (comparation based algorithms)* 中排序算法的复杂度下界。
 
 ### 4. Cursor List
 
