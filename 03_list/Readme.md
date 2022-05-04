@@ -43,14 +43,14 @@
   + 从后往前，依次有序，每次选出unsorted部分中最大的元素插入sorted部分
   + 外循环需要$O(n)$，若采取遍历方式selectMax需$O(n)$，则总体复杂度为$O(n^2)$，在之后的数据结构中，可将selectMax的复杂度降为$O(logn)$，则selectionSort的复杂度随之降为$O(nlogn)$
 
-<img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
-<img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width = "100" height = "100" div align=center />
+
 
 + InsertSort：
 
   + 从前往后，依次有序，对每“新增”的一个元素，在sorted部分中寻找插入位置并插入
   + Best Case -- $O(n)$，全部有序；Worst Case -- $O(n^2)$，全部逆序
   + InsertSort属于输入敏感性(input sensitive)，其总体复杂度取决于数据中逆序对的个数，事实上，每次交换只能减少一个逆序对，程序运行时间为$O(n+I)$，其中I为逆序对个数
+    <img src="https://media.giphy.com/media/2ATrYdqmEkfDAklIMD/giphy.gif" width="700px" div align="center" />
 
 ### 4. Cursor List
 
