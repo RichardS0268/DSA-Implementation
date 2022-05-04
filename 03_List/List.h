@@ -2,9 +2,7 @@
 #define __LIST__
 #include <iostream>
 #include "ListNode.h"
-#include "../00_util/utils.h"
 using namespace std;
-
 
 template<typename T>
 class List{ //列表模板类
@@ -39,6 +37,7 @@ public:
     bool valid (ListNodePosi<T> p){ //判断位置p对外是否合法
         return p && (trailer != p) && (header != p); //头尾哨兵不对外开放 
     }
+    int disordered() const; // 判断列表是否已经排序
     ListNodePosi<T> find(T const& e) const{ //无序列表查找
         return find(e, _size, trailer);
     }
@@ -174,7 +173,7 @@ template<typename T>
 ListNodePosi<T> List<T>::selectMax(ListNodePosi<T> p, int n){ //O(n)，一趟扫描
     ListNodePosi<T> max = p;
     for (ListNodePosi<T> cur = p; 1 < n; n--){//后续节点（n个）依次与max->data比较
-        if(!lt((cur = cur->succ)->data, max->data))
+        if(((cur = cur->succ)->data >= max->data))
             max = cur;
     }
     return max;
