@@ -83,9 +83,9 @@ g++ computation.cpp -o computation
 ./computation
 ```
 
-#### 2.5 BFS
+#### 2.5 DFS
 
-借助栈实现广度优先算法
+借助栈实现深度优先算法（迭代实现）
 
 示例1：*八皇后问题*
 
@@ -161,7 +161,7 @@ Route found
 
 > ■为障碍，$为终点，Ⓢ为起点，○为BFS过程中搜索过的点，—为通路路径
 
-有障碍时，BFS解出的路径**往往不是**最短路径，更多有关路径搜索的讨论见  [Introduction-to-AI/Search/A-star](https://github.com/RichardS0268/Introduction-to-AI/tree/main/Search/A-star) 
+有障碍时，DFS解出的路径**往往不是**最短路径，更多有关路径搜索的讨论见  [Introduction-to-AI/Search/A-star](https://github.com/RichardS0268/Introduction-to-AI/tree/main/Search/A-star) 
 
 #### 2.6 直方图内最大矩形
 
